@@ -15,7 +15,7 @@ hook.Add("PostDrawTranslucentRenderables","LicensePlate",function()
 	surface.SetDrawColor(255,255,255,255)
 	surface.SetFont("LicensePlate")
 	surface.SetTextColor(LicensePlate_lang().SetTextColor)
-	for _,veh in ipairs(ents.FindByClass("prop_vehicle_*")) do
+	for _,veh in ipairs(ents.FindByClass("gmod_sent_vehicle_fphysics_base")) do
 		model=veh:GetModel()
 		if LicensePlate.ModelPlates[model] then
 			local id=veh:GetNWString("LicensePlate",nil)
